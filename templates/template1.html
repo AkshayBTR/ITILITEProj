@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 1</title>
+</head>
+<body>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+        elit. Aenean commodo ligula eget dolor. Aenean 
+        massa.</li>
+        <li>Cum sociis natoque penatibus et magnis dis 
+        parturient montes, nascetur ridiculus mus. Donec quam 
+        felis, ultricies nec, pellentesque eu, pretium quis, 
+        sem.</li>
+        <li>Nulla consequat massa quis enim. Donec pede justo, 
+        fringilla vel, aliquet nec, vulputate eget, arcu.</li>
+        <li>In enim justo, rhoncus ut, imperdiet a, venenatis 
+        vitae, justo. Nullam dictum felis eu pede mollis 
+        pretium. Integer tincidunt.</li>
+      </ul>
+      PARAGRAPH
+
+      <h1>hello {{name}}</h1>
+      <h2>welcome to {{Profession}} Position</h2>
+      <ol>
+        {% for fruit in fruits %}
+        <li>{{fruit}}</li>
+      {% endfor %}
+      <h1><a href="{% url 'app:grt2' a=10 b=4 %}">Template</a></h1>
+      </ol>
+      
+</body>
+</html>

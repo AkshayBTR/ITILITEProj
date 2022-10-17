@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  <title>Profile</title>
+{% endblock %}
+
+{% block content %}
+  <table border="2ptpt">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>JobType</th>
+        <th>Skills</th>
+        <th>Profile_Pic</th>
+    </tr>
+    {% for data in datas %}
+    <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.gender}}</td>
+        <td>{{data.work_type}}</td>
+        <td>
+            {% for skill in data.skills.all %}
+                {{skill}} 
+            {% endfor %}
+        </td>
+        <td><img src="{{data.profile_pic.url}}" alt="No Image" width="50" height="50"></td>
+    </tr>
+    {% endfor %}
+    
+  </table>
+{% endblock %}

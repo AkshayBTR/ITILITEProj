@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest of 2 numbers</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% if a > b %}
+      <h1>{{a}}</h1>
+    {% else %}
+      <h1>{{b}}</h1>
+    {% endif %}
+<h1><a href="{% url 'app:tempdemo' %}">Template</a></h1>
+<img src="{% static 'images/photo.jpg' %}" width="100pt" height="100pt" alt="">
+</body>
+</html>

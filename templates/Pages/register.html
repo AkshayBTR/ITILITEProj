@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  <title>Register</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- First_name : <input type="text" name="first_name" id="first_name"><br><br>
+    Last_name : <input type="text" name="last_name" id="last_name"><br><br>
+    Username : <input type="text" name="username" id="username">
+    Email : <input type="email" name="email" id="email"><br><br>
+    Password : <input type="password" name="pwd" id="pwd">
+    Gender<select name="gender" id="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select><br><br>
+    <h4>Work Type</h4>
+    Part-time : <input type="radio" name="worktype" id="worktype" value="Part-Time"><br>
+    Full-time : <input type="radio" name="worktype" id="worktype" value="Full-Time"><br>
+    <h4>Skills</h4>
+    Java : <input type="checkbox" name="skills" id="Java" value="Java"> <br>
+    Python : <input type="checkbox" name="skills" id="Pyhton" value="Python"> <br>
+    PHP :  <input type="checkbox" name="skills" id="PHP" value="PHP"> <br>
+    <br>
+    <input type="file" name="profilepic" id="profilepic"> -->
+    
+    {{userform.as_p}}
+    {{profileform.as_p}}
+    <input type="submit" value="Register">
+  </div>
+  </form>
+{% endblock %}
